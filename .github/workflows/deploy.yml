@@ -1,0 +1,16 @@
+name: Deploy Landing Page
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install & Build
+        run: |
+          npm install
+          npm run build
+      # Aqui você pode adicionar passos para enviar via SSH para sua VPS 
+      # ou usar o action da Vercel.

@@ -1,0 +1,64 @@
+import React, { useState } from 'react';
+
+const Navbar: React.FC = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const menuItems = [
+        { label: 'Home', href: '#home' },
+        { label: 'Serviços', href: '#services' },
+        { label: 'Experiência', href: '#experience' },
+        { label: 'Contato', href: '#contact' },
+    ];
+
+    return (
+        <>
+            {/* Botão Trigger - Fixo no topo direito */}
+            <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="fixed top-6 right-6 z-50 bg-brand-gold p-3 rounded-sm shadow-xl hover:scale-110 transition-transform cursor-pointer"
+            >
+                <div className="space-y-1.5">
+                    <span className={`block h-0.5 w-6 bg-black transition-transform ${isOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+                    <span className={`block h-0.5 w-6 bg-black transition-opacity ${isOpen ? 'opacity-0' : ''}`}></span>
+                    <span className={`block h-0.5 w-6 bg-black transition-transform ${isOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+                </div>
+            </button>
+
+            {/* Overlay Escuro */}
+            <div
+                className={`fixed inset-0 bg-black/60 backdrop-blur-sm z-40 transition-opacity duration-500 ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+                onClick={() => setIsOpen(false)}
+            />
+
+            {/* Menu Retrátil (Sidebar) */}
+            <nav className={`fixed top-0 right-0 h-full w-full max-w-[300px] bg-brand-dark border-l border-gray-800 z-45 transform transition-transform duration-500 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+                <div className="flex flex-col h-full p-12 justify-center">
+                    <span className="text-brand-gold text-xs tracking-[0.5em] uppercase mb-8 opacity-50">Navigation</span>
+
+                    <ul className="space-y-8">
+                        {menuItems.map((item) => (
+                            <li key={item.label}>
+                                <a
+                                    href={item.href}
+                                    onClick={() => setIsOpen(false)}
+                                    className="text-3xl font-bold hover:text-brand-gold transition-colors tracking-tighter"
+                                >
+                                    {item.label}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+
+                    <div className="mt-auto pt-10 border-t border-gray-900">
+                        <p className="text-[10px] text-gray-600 uppercase tracking-widest leading-loose">
+                            Votorantim - SP<br />
+                            Consultoria Técnica Sênior
+                        </p>
+                    </div>
+                </div>
+            </nav>
+        </>
+    );
+};
+
+export default Navbar;
