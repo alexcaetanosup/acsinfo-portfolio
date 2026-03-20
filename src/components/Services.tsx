@@ -8,24 +8,40 @@ interface ServiceItem {
 }
 
 const services: ServiceItem[] = [
+    // {
+    //     title: "Web & Mobile Development",
+    //     description: "Criação de interfaces de alta fidelidade e performance utilizando React e React Native. Foco total em experiência do usuário e código limpo.",
+    //     tags: ["TypeScript", "React", "Vue", "Expo"]
+    // },
+    // {
+    //     title: "Software Architecture",
+    //     description: "Estruturação de projetos escaláveis, escolha de stack eficiente e organização de componentes para manutenção a longo prazo.",
+    //     tags: ["Design Patterns", "Clean Code", "Performance"]
+    // },
+    // {
+    //     title: "Full-Cycle Delivery",
+    //     description: "Desenvolvimento consciente: do frontend à entrega final, garantindo que a aplicação esteja pronta para ambientes de produção reais.",
+    //     tags: ["CI/CD", "Cloud Aware", "Optimization"]
+    // }
     {
-        title: "Web & Mobile Development",
-        description: "Criação de interfaces de alta fidelidade e performance utilizando React e React Native. Foco total em experiência do usuário e código limpo.",
-        tags: ["TypeScript", "React", "Vue", "Expo"]
+        title: "Fullstack Engineering",
+        description: "Desenvolvimento de sistemas robustos e interfaces de alta performance (React/Native). Do frontend ao backend com foco em escalabilidade.",
+        tags: ["TypeScript", "React", "Node.js", "Expo"]
     },
     {
-        title: "Software Architecture",
-        description: "Estruturação de projetos escaláveis, escolha de stack eficiente e organização de componentes para manutenção a longo prazo.",
-        tags: ["Design Patterns", "Clean Code", "Performance"]
+        title: "Infra & Cloud Aware",
+        description: "Estruturação de ambientes seguros e otimizados. Garantindo que sua aplicação suporte o tráfego real com performance e segurança.",
+        tags: ["Redes", "Performance", "Cloud", "CI/CD"]
     },
     {
-        title: "Full-Cycle Delivery",
-        description: "Desenvolvimento consciente: do frontend à entrega final, garantindo que a aplicação esteja pronta para ambientes de produção reais.",
-        tags: ["CI/CD", "Cloud Aware", "Optimization"]
+        title: "Data Intelligence (BI)",
+        description: "Transformação de dados brutos em decisões estratégicas. Dashboards inteligentes e análise de KPIs para o crescimento do seu negócio.",
+        tags: ["Dashboards", "KPIs", "Data Viz", "Estratégia"]
     }
 ];
 
 const Services: React.FC = () => {
+
     return (
         <section className="py-24 px-6 bg-brand-black">
             <div className="max-w-6xl mx-auto">

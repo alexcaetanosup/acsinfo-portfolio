@@ -7,9 +7,15 @@ const Hero: React.FC = () => {
             <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_var(--color-brand-gray)_0%,_transparent_70%)] opacity-40 -z-10" />
 
             <div className="max-w-4xl text-center space-y-6">
-                <h1 className="text-5xl md:text-8xl font-black tracking-tighter uppercase italic">
+                {/* <h1 className="text-5xl md:text-8xl font-black tracking-tighter uppercase italic">
                     High-End <br />
                     <span className="text-brand-gold">Engineering</span>
+                </h1> */}
+
+
+                <h1 className="text-5xl md:text-8xl font-black tracking-tighter uppercase italic">
+                    Engenharia<br />
+                    <span className="text-brand-gold"> de Ponta</span>
                 </h1>
 
                 <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed">

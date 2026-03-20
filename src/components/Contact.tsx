@@ -5,6 +5,14 @@ const Contact: React.FC = () => {
     const whatsappNumber = "55159XXXXXXXX"; // Substitua pelos seus números reais
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=Olá Alex! Vi seu site e gostaria de solicitar um orçamento de consultoria.`;
 
+
+    if (event.key === 'Escape') {
+        // Só sobe se o usuário NÃO estiver digitando em um input ou textarea
+        const target = event.target as HTMLElement;
+        if (target.tagName !== 'INPUT' && target.tagName !== 'TEXTAREA') {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    }
     return (
         <section id="contact" className="py-24 px-6 ">
             <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
@@ -21,13 +29,14 @@ const Contact: React.FC = () => {
                     </div>
 
                     <div className="space-y-6">
-                        <p className="text-[#a8a8b3] font-light leading-relaxed max-w-md">
-                            Especialista em desenvolvimento Fullstack e arquitetura de sistemas.
-                            Atendimento independente baseado em
-                            <div>
-                                Votorantim - SP
-                            </div>
-                        </p>
+                        <div className="text-[#a8a8b3] font-light leading-relaxed max-w-md">
+                            <p>
+                                Especialista em desenvolvimento Fullstack e arquitetura de sistemas.
+                            </p>
+                            <p className="mt-2">
+                                Atendimento independente baseado em ** Votorantim - SP **.
+                            </p>
+                        </div>
 
                         <div className="flex flex-col space-y-4 pt-4">
                             {/* E-MAIL CLICÁVEL
@@ -111,7 +120,6 @@ const Contact: React.FC = () => {
                         </button>
                     </form>
                 </div>
-
             </div>
         </section>
     );
