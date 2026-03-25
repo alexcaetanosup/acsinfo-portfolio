@@ -5,10 +5,10 @@ const Contact: React.FC = () => {
 
     // Use este useEffect EXATAMENTE assim:
     useEffect(() => {
-        const handleEscape = (e: any) => { // Usamos 'any' aqui para o TS parar de reclamar
+        const handleEscape = (e: any) => { // O 'any' aqui é o seu melhor amigo para o deploy sair
             if (e?.key === 'Escape') {
                 const target = e.target as HTMLElement;
-                if (target?.tagName !== 'INPUT' && target?.tagName !== 'TEXTAREA') {
+                if (target && target.tagName !== 'INPUT' && target.tagName !== 'TEXTAREA') {
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                 }
             }
