@@ -1,15 +1,15 @@
 import React from 'react';
-// 1. Corrigimos a importação: Swiper e SwiperSlide vêm de 'swiper/react'
+// 1. IMPORTAÇÕES CORRETAS DOS MÓDULOS
+import { EffectFlip, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-// 2. Importamos os estilos base e dos módulos que vamos usar
+// 2. IMPORTS DE CSS QUE O VITE/VERCEL EXIGEM
 import 'swiper/css';
 import 'swiper/css/effect-flip';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 // 3. Corrigimos a importação dos módulos de 'swiper/modules'
-import { EffectFlip, Navigation, Pagination } from 'swiper/modules';
 
 const SpeechBubblesSlide: React.FC = () => {
     return (
