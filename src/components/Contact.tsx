@@ -77,7 +77,7 @@ const Contact: React.FC = () => {
                     <form action="https://api.web3forms.com/submit" method="POST" className="space-y-6">
                         <input type="hidden" name="apikey" value="bba34a22-4b8b-49ca-b0a1-9357f5445079" />
 
-                        <div className="flex flex-col space-y-2">
+                        <div className="flex flex-col space-y-2 bg-brand-deep">
                             <label className="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Nome</label>
                             <input type="text" name="name" required className="bg-transparent border-b border-gray-800 py-2 focus:border-[#d4af37] outline-none text-white transition-colors" />
                         </div>
