@@ -53,14 +53,16 @@ const Expertise: React.FC = () => {
             {/* Lógica do Modal (Isolada do Grid) */}
             {isModalOpen && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 backdrop-blur-sm">
-                    <div className="relative w-full max-w-4xl">
-                        {/* Botão para fechar o modal */}
+                    <div className="relative w-full max-w-4xl flex flex-col">
+
+                        {/* Botão para fechar o modal - Posicionado acima do conteúdo com margem segura */}
                         <button
                             onClick={() => setIsModalOpen(false)}
-                            className="absolute -top-12 right-0 text-white hover:bg-brand-deep font-bold text-sm tracking-widest transition-colors"
+                            className="self-end mb-4 text-white hover:text-brand-light font-bold text-sm tracking-widest transition-colors flex items-center gap-2"
                         >
-                            FECHAR [X]
+                            FECHAR <span className="text-xl">×</span>
                         </button>
+
                         {/* O componente de flipbook */}
                         <div className="bg-[#151515] rounded-lg overflow-hidden shadow-2xl">
                             <CVModal />
