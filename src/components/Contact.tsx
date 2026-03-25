@@ -1,20 +1,18 @@
 import React, { useEffect } from 'react';
 
 const Contact: React.FC = () => {
-    const whatsappNumber = "5515997686416";
-    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=Olá Alex!`;
+    // ... suas consts de whatsapp aqui
 
+    // Use este useEffect EXATAMENTE assim:
     useEffect(() => {
-        // Tipagem explícita para evitar o erro 'possibly undefined'
-        const handleEscape = (e: KeyboardEvent) => {
-            if (e.key === 'Escape') {
+        const handleEscape = (e: any) => { // Usamos 'any' aqui para o TS parar de reclamar
+            if (e?.key === 'Escape') {
                 const target = e.target as HTMLElement;
-                if (target && target.tagName !== 'INPUT' && target.tagName !== 'TEXTAREA') {
+                if (target?.tagName !== 'INPUT' && target?.tagName !== 'TEXTAREA') {
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                 }
             }
         };
-
         window.addEventListener('keydown', handleEscape);
         return () => window.removeEventListener('keydown', handleEscape);
     }, []);

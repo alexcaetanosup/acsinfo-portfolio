@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 // 2. IMPORTS DE CSS QUE O VITE/VERCEL EXIGEM
 import 'swiper/css';
+import 'swiper/css/bundle';
 import 'swiper/css/effect-flip';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
