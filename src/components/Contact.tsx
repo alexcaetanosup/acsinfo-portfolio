@@ -14,7 +14,8 @@ const Contact: React.FC = () => {
         }
     }
     return (
-        <section id="contact" className="py-24 px-6 ">
+        <section id="contact" className="py-24 px-6 bg-[#1a1a1c]
+        ">
             <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
 
                 {/* LADO ESQUERDO: INFORMAÇÕES E REDES */}

@@ -4,6 +4,8 @@
   /* --color-brand-black: #1a1a1c;
   --color-brand-dark: #222225; */
   --color-brand-deep: oklch(36.4% 0.029 323.89);
+  --color-brand-light: oklch(54.2% 0.034 322.5);
+
   --color-brand-gold: #d4af37;
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
 }
@@ -20,7 +22,7 @@ body {
 }
 /* Forçando o fundo no container do React */
 #root {
-  background-color: !important;
+  background-color: bg-black !important;
   min-height: 100vh;
 }
 
@@ -47,4 +49,13 @@ body {
 ::-webkit-scrollbar-thumb {
   background: #d4af37;
   border-radius: 10px;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: #007bff !important; /* Cor azul para as setas */
+  transform: scale(0.6); /* Ajusta o tamanho */
+}
+
+.swiper-pagination-bullet-active {
+  background: #007bff !important;
 }

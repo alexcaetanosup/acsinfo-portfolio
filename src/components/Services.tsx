@@ -43,7 +43,7 @@ const services: ServiceItem[] = [
 const Services: React.FC = () => {
 
     return (
-        <section className="py-24 px-6 bg-brand-black">
+        <section className="py-24 px-6 bg-[#1a1a1c]">
             <div className="max-w-6xl mx-auto">
                 <div className="mb-16">
                     <h2 className="text-sm uppercase tracking-[0.3em] text-brand-gold font-bold mb-4">

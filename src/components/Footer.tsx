@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
                 {/* Lado Direito: Stack e Ano */}
                 <div className="text-center md:text-right">
                     <p className="text-[10px] text-gray-600 uppercase tracking-[0.2em]">
-                        &copy; {new Date().getFullYear()} — Engineered with TypeScript & React
+                        &copy; {new Date().getFullYear()} — ACSInfo - Engineered with TypeScript & React
                     </p>
                 </div>
 

@@ -2,7 +2,7 @@ import React from 'react';
 
 const WhatsAppButton: React.FC = () => {
     // Configuração do seu link (DDD 15 - Votorantim)
-    const whatsappUrl = "https://wa.me/55159XXXXXXXX?text=Olá Alex! Vi seu site e gostaria de falar sobre um projeto.";
+    const whatsappUrl = "https://wa.me/5515997686416?text=Olá Alex! Vi seu site e gostaria de falar sobre um projeto.";
 
     return (
         <a
