@@ -63,9 +63,19 @@ const Contact: React.FC = () => {
                 </div>
 
                 {/* LADO DIREITO: FORMULÁRIO */}
-                <div className="bg-[#161618] text-white p-8 border border-gray-800 rounded-sm shadow-2xl">
+
+                {/* Mimha chave na Web3Forms: bba34a22-4b8b-49ca-b0a1-9357f5445079 */}
+                {/* <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="bba34a22-4b8b-49ca-b0a1-9357f5445079">
+                        <input type="text" name="name" required>
+                            <input type="email" name="email" required>
+                                <textarea name="message" required></textarea>
+                                <button type="submit">Submit</button>
+                            </form> */}
+
+                <div className=" bg-brand-deep text-white p-8 border border-gray-800 rounded-sm shadow-2xl">
                     <form action="https://api.web3forms.com/submit" method="POST" className="space-y-6">
-                        <input type="hidden" name="apikey" value="SUA_CHAVE_AQUI" />
+                        <input type="hidden" name="apikey" value="bba34a22-4b8b-49ca-b0a1-9357f5445079" />
 
                         <div className="flex flex-col space-y-2">
                             <label className="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Nome</label>
