@@ -1,27 +1,22 @@
 import React, { useEffect } from 'react';
 
 const Contact: React.FC = () => {
-    // Configuração do WhatsApp
     const whatsappNumber = "5515997686416";
-    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=Olá Alex! Vi seu site e gostaria de solicitar um orçamento de consultoria.`;
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=Olá Alex!`;
 
-    // CORREÇÃO: Lógica de teclado deve ficar dentro de um useEffect
     useEffect(() => {
-        const handleGlobalKeyDown = (event: KeyboardEvent) => {
-            if (event.key === 'Escape') {
-                const target = event.target as HTMLElement;
-                // Só sobe se não estiver digitando em campos de texto
-                if (target.tagName !== 'INPUT' && target.tagName !== 'TEXTAREA') {
+        // Tipagem explícita para evitar o erro 'possibly undefined'
+        const handleEscape = (e: KeyboardEvent) => {
+            if (e.key === 'Escape') {
+                const target = e.target as HTMLElement;
+                if (target && target.tagName !== 'INPUT' && target.tagName !== 'TEXTAREA') {
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                 }
             }
         };
 
-        // Adiciona o ouvinte de evento ao carregar o componente
-        window.addEventListener('keydown', handleGlobalKeyDown);
-
-        // Remove ao sair para não pesar a memória
-        return () => window.removeEventListener('keydown', handleGlobalKeyDown);
+        window.addEventListener('keydown', handleEscape);
+        return () => window.removeEventListener('keydown', handleEscape);
     }, []);
 
     return (
