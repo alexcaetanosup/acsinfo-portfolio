@@ -106,3 +106,11 @@ Implementação de design adaptável para dispositivos móveis e tablets:
 - **Seção Expertise**: Empilhamento vertical dos cards de Alex e Larissa em dispositivos móveis, com centralização do botão de currículo.
 - **Formulário de Contato**: Ajuste do layout de duas colunas para fluxo vertical, garantindo que o formulário ocupe a largura total no celular sem quebrar o design.
 - **Otimização de Padding**: Ajuste global dos paddings (`py-24` para `py-16` em mobile) para melhor aproveitamento do espaço vertical.
+- **Fix (Hero Buttons)**: Corrigido overflow horizontal dos balões informativos no mobile; implementada lógica de posicionamento dinâmico (vertical em telas pequenas, horizontal em desktops).
+
+## 🚀 Deploy & Integração Contínua
+
+- **Plataforma**: Vercel.
+- **Fluxo**: Integrado ao GitHub. O deploy é gatilhado automaticamente a cada `git push` na branch principal.
+- **Monitoramento**: Logs de build disponíveis no painel da Vercel para conferência de erros de compilação.
+- **Ajuste de Layout (Expertise)**: Aumentado o padding vertical para `py-40` e definida altura mínima de `80vh` para evitar sobreposição visual da seção de contato em resoluções altas.

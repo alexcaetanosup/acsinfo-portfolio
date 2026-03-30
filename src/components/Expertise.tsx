@@ -5,8 +5,11 @@ const Expertise: React.FC = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     return (
-        <section className="py-16 md:py-20 bg-[#0a0a0a] border-y border-white/5">
-            <div className="max-w-6xl mx-auto px-6">
+        // <section className="py-16 md:py-20 bg-[#0a0a0a] border-y border-white/5">
+        //     <div className="max-w-6xl mx-auto px-6">
+
+        <section className="py-24 md:py-40 bg-[#0a0a0a] border-y border-white/5 min-h-[80vh] flex items-center">
+            <div className="max-w-6xl mx-auto px-6 w-full">
 
                 {/* Título da Seção - Centralizado no mobile */}
                 <div className="mb-10 md:mb-12 text-center md:text-left">
@@ -53,17 +56,24 @@ const Expertise: React.FC = () => {
             {isModalOpen && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 p-2 md:p-4 backdrop-blur-sm">
                     <div className="relative w-full max-w-4xl flex flex-col h-[90vh] md:h-auto">
-
-                        <button
+                        {/* <button
                             onClick={() => setIsModalOpen(false)}
                             className="self-end mb-2 md:mb-4 text-white hover:text-[#007BFF] font-bold text-xs tracking-widest transition-colors flex items-center gap-2 p-2"
                         >
                             FECHAR <span className="text-xl">×</span>
-                        </button>
+                        </button> */}
 
                         {/* Container do Flipbook adaptado */}
                         <div className="bg-[#151515] rounded-lg overflow-hidden shadow-2xl flex-1 md:flex-none">
                             <CVModal />
+                        </div>
+                        <div className="relative w-full max-w-4xl flex flex-col h-[90vh] md:h-auto">
+                            <button
+                                onClick={() => setIsModalOpen(false)}
+                                className="self-end mb-2 md:mb-4 text-white hover:text-[#007BFF] font-bold text-xs tracking-widest transition-colors flex items-center gap-2 p-2"
+                            >
+                                FECHAR <span className="text-xl">×</span>
+                            </button>
                         </div>
 
                     </div>

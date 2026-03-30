@@ -67,7 +67,8 @@ const Portfolio: React.FC = () => {
                             </div>
 
                             {/* CONTEÚDO */}
-                            <div className="p-6 md:p-8 space-y-6 flex-1 flex flex-col">
+                            <div className="p-6 md:p-6 space-y-4 flex-1 flex flex-col">
+
                                 <div className="space-y-2">
                                     <span className="text-[10px] font-bold text-blue-400 uppercase tracking-widest">
                                         {project.category}
