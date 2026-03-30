@@ -78,11 +78,11 @@ const Hero: React.FC = () => {
                 <div className="pt-8 md:pt-12 flex flex-col sm:flex-row gap-8 md:gap-12 justify-center items-center relative animate-in fade-in zoom-in duration-1000 delay-700">
 
                     {/* Botão Projetos */}
-                    <div className="relative w-full sm:w-auto">
+                    <div className="relative w-full sm:w-auto flex flex-col items-center">
                         {showProjects && (
-                            <div className="absolute bottom-full mb-6 sm:bottom-auto sm:right-full sm:mr-12 sm:top-1/2 sm:-translate-y-1/2 w-[280px] md:w-[300px] bg-blue-900/40 border border-blue-500/30 p-6 md:p-8 flex flex-col justify-center shadow-2xl backdrop-blur-xl animate-in fade-in zoom-in duration-300 z-50 rounded-2xl sm:rounded-[100%_/_50%] text-center left-1/2 -translate-x-1/2 sm:left-auto sm:translate-x-0">
+                            <div className="absolute bottom-[110%] sm:bottom-auto sm:right-full sm:mr-10 sm:top-1/2 sm:-translate-y-1/2 w-[260px] md:w-[300px] bg-blue-900/40 border border-blue-500/30 p-6 md:p-8 flex flex-col justify-center shadow-2xl backdrop-blur-xl animate-in fade-in zoom-in duration-300 z-50 rounded-2xl sm:rounded-[100%_/_50%] text-center">
                                 <h4 className="text-[11px] font-black text-blue-400 mb-2 uppercase tracking-widest">🚀 Projetos</h4>
-                                <ul className="text-[10px] space-y-1 text-gray-300 list-disc list-inside">
+                                <ul className="text-[10px] space-y-1 text-gray-300 list-none">
                                     <li>Modernização de Sistemas Legados (Vue/TS/React)</li>
                                     <li>Dashboards Executivos Integrados (Power BI/SQL)</li>
                                     <li>Automação de Processos com IA e RPA (N8N/Python)</li>
@@ -91,7 +91,9 @@ const Hero: React.FC = () => {
                             </div>
                         )}
                         <button
-                            onMouseEnter={() => setShowProjects(true)} onMouseLeave={() => setShowProjects(false)}
+                            onMouseEnter={() => setShowProjects(true)}
+                            onMouseLeave={() => setShowProjects(false)}
+                            onClick={() => setShowProjects(!showProjects)} // Toque no mobile
                             className="w-full sm:w-auto px-10 py-5 border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white transition-all font-black text-xs tracking-[0.2em] uppercase rounded-sm active:scale-95 shadow-lg shadow-blue-500/10"
                         >
                             Iniciar Projeto
@@ -99,9 +101,9 @@ const Hero: React.FC = () => {
                     </div>
 
                     {/* Botão Especialidades */}
-                    <div className="relative w-full sm:w-auto">
+                    <div className="relative w-full sm:w-auto flex flex-col items-center">
                         {showSpecialties && (
-                            <div className="absolute bottom-full mb-6 sm:bottom-auto sm:left-full sm:ml-12 sm:top-1/2 sm:-translate-y-1/2 w-[280px] md:w-[300px] bg-purple-900/40 border border-purple-500/30 p-6 md:p-8 flex flex-col justify-center shadow-2xl backdrop-blur-xl animate-in fade-in zoom-in duration-300 z-50 rounded-2xl sm:rounded-[100%_/_50%] text-center left-1/2 -translate-x-1/2 sm:left-auto sm:translate-x-0">
+                            <div className="absolute bottom-[110%] sm:bottom-auto sm:left-full sm:ml-10 sm:top-1/2 sm:-translate-y-1/2 w-[260px] md:w-[300px] bg-purple-900/40 border border-purple-500/30 p-6 md:p-8 flex flex-col justify-center shadow-2xl backdrop-blur-xl animate-in fade-in zoom-in duration-300 z-50 rounded-2xl sm:rounded-[100%_/_50%] text-center">
                                 <h4 className="text-[11px] font-black text-purple-400 mb-2 uppercase tracking-widest">🧠 Skills</h4>
                                 <div className="grid grid-cols-2 gap-2 text-[10px] text-gray-400 font-mono">
                                     <li>Arquitetura Frontend Moderna</li>
@@ -114,7 +116,9 @@ const Hero: React.FC = () => {
                             </div>
                         )}
                         <button
-                            onMouseEnter={() => setShowSpecialties(true)} onMouseLeave={() => setShowSpecialties(false)}
+                            onMouseEnter={() => setShowSpecialties(true)}
+                            onMouseLeave={() => setShowSpecialties(false)}
+                            onClick={() => setShowSpecialties(!showSpecialties)} // Toque no mobile
                             className="w-full sm:w-auto px-10 py-5 border-2 border-purple-500 text-purple-500 hover:bg-purple-500 hover:text-white transition-all font-black text-xs tracking-[0.2em] uppercase rounded-sm active:scale-95 shadow-lg shadow-purple-500/10"
                         >
                             Especialidades
@@ -372,3 +376,49 @@ export default Hero;
 // export default Hero;
 
 
+// <div className="pt-8 md:pt-12 flex flex-col sm:flex-row gap-8 md:gap-12 justify-center items-center relative animate-in fade-in zoom-in duration-1000 delay-700">
+
+//     {/* Botão Projetos */}
+//     <div className="relative w-full sm:w-auto">
+//         {showProjects && (
+//             <div className="absolute bottom-full mb-6 sm:bottom-auto sm:right-full sm:mr-12 sm:top-1/2 sm:-translate-y-1/2 w-[280px] md:w-[300px] bg-blue-900/40 border border-blue-500/30 p-6 md:p-8 flex flex-col justify-center shadow-2xl backdrop-blur-xl animate-in fade-in zoom-in duration-300 z-50 rounded-2xl sm:rounded-[100%_/_50%] text-center left-1/2 -translate-x-1/2 sm:left-auto sm:translate-x-0">
+//                 <h4 className="text-[11px] font-black text-blue-400 mb-2 uppercase tracking-widest">🚀 Projetos</h4>
+//                 <ul className="text-[10px] space-y-1 text-gray-300 list-disc list-inside">
+//                     <li>Modernização de Sistemas Legados (Vue/TS/React)</li>
+//                     <li>Dashboards Executivos Integrados (Power BI/SQL)</li>
+//                     <li>Automação de Processos com IA e RPA (N8N/Python)</li>
+//                     <li>Criação de Apps Mobile Multiplataforma (Flutter)</li>
+//                 </ul>
+//             </div>
+//         )}
+//         <button
+//             onMouseEnter={() => setShowProjects(true)} onMouseLeave={() => setShowProjects(false)}
+//             className="w-full sm:w-auto px-10 py-5 border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white transition-all font-black text-xs tracking-[0.2em] uppercase rounded-sm active:scale-95 shadow-lg shadow-blue-500/10"
+//         >
+//             Iniciar Projeto
+//         </button>
+//     </div>
+
+//     {/* Botão Especialidades */}
+//     <div className="relative w-full sm:w-auto">
+//         {showSpecialties && (
+//             <div className="absolute bottom-full mb-6 sm:bottom-auto sm:left-full sm:ml-12 sm:top-1/2 sm:-translate-y-1/2 w-[280px] md:w-[300px] bg-purple-900/40 border border-purple-500/30 p-6 md:p-8 flex flex-col justify-center shadow-2xl backdrop-blur-xl animate-in fade-in zoom-in duration-300 z-50 rounded-2xl sm:rounded-[100%_/_50%] text-center left-1/2 -translate-x-1/2 sm:left-auto sm:translate-x-0">
+//                 <h4 className="text-[11px] font-black text-purple-400 mb-2 uppercase tracking-widest">🧠 Skills</h4>
+//                 <div className="grid grid-cols-2 gap-2 text-[10px] text-gray-400 font-mono">
+//                     <li>Arquitetura Frontend Moderna</li>
+//                     <li>Engenharia de Dados & BI</li>
+//                     <li>Integração de Agentes IA</li>
+//                     <li>Gestão de TI Crítica (Saúde)</li>
+//                     <li>Infraestrutura & Redes (Unicamp)</li>
+//                     <li>Automação Selenium/RPA</li>
+//                 </div>
+//             </div>
+//         )}
+//         <button
+//             onMouseEnter={() => setShowSpecialties(true)} onMouseLeave={() => setShowSpecialties(false)}
+//             className="w-full sm:w-auto px-10 py-5 border-2 border-purple-500 text-purple-500 hover:bg-purple-500 hover:text-white transition-all font-black text-xs tracking-[0.2em] uppercase rounded-sm active:scale-95 shadow-lg shadow-purple-500/10"
+//         >
+//             Especialidades
+//         </button>
+//     </div>
+// </div>
