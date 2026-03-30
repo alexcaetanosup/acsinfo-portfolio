@@ -62,7 +62,12 @@ const Contact: React.FC = () => {
                 {/* LADO DIREITO: FORMULÁRIO */}
                 <div className="bg-brand-deep text-white p-6 md:p-8 border border-gray-800 rounded-sm shadow-2xl">
                     <form action="https://api.web3forms.com/submit" method="POST" className="space-y-6">
-                        <input type="hidden" name="apikey" value={import.meta.env.VITE_WEB3FORMS_KEY} />
+                        <input type="hidden" name="access_key" value="bba34a22-4b8b-49ca-b0a1-9357f5445079" />
+                        {/* <input type="hidden" name="access_key" value={import.meta.env.VITE_WEB3FORMS_KEY} /> */}
+
+                        <input type="hidden" name="redirect" value="https://www.acsinfo.net.br/obrigado" />
+                        <input type="hidden" name="from_name" value="Site ACS Info" />
+                        <input type="hidden" name="subject" value="Novo Contato de Consultoria" />
 
                         <div className="flex flex-col space-y-2">
                             <label className="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Nome</label>
