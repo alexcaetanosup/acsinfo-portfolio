@@ -1,7 +1,10 @@
-import { Bot, ChevronDown, MessageSquare, Send, X } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
+import { AIACSInfo } from './AIACSInfo/AIACSInfo';
 
 const Hero: React.FC = () => {
+
+
     const [showProjects, setShowProjects] = useState(false);
     const [showSpecialties, setShowSpecialties] = useState(false);
     const [isChatOpen, setIsChatOpen] = useState(false);
@@ -128,7 +131,7 @@ const Hero: React.FC = () => {
             </div>
 
             {/* CHAT IA Adaptado para Mobile */}
-            <div className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-[100]">
+            {/* <div className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-[100]">
                 {isChatOpen ? (
                     <div className="w-[calc(100vw-48px)] sm:w-[320px] h-[450px] md:h-[480px] bg-[#0d0d0d] border border-white/10 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,1)] flex flex-col overflow-hidden animate-in slide-in-from-bottom-12 duration-500 backdrop-blur-2xl">
                         <div className="p-4 md:p-5 bg-blue-600 flex justify-between items-center text-white">
@@ -156,15 +159,17 @@ const Hero: React.FC = () => {
                 ) : (
                     <button onClick={() => setIsChatOpen(true)} className="w-14 h-14 md:w-16 md:h-16 bg-blue-600 rounded-full flex items-center justify-center shadow-2xl animate-bounce text-white transition-all hover:scale-110">
                         {/* Usamos classes do Tailwind para o tamanho: w-6 (24px) e md:w-7 (28px) */}
-                        <MessageSquare className="w-6 h-6 md:w-7 md:h-7" />
-                    </button>
+            {/* <MessageSquare className="w-6 h-6 md:w-7 md:h-7" /> */}
+            {/* </button>
                 )}
-            </div>
+            </div> */}
 
             <div className="absolute bottom-6 md:bottom-10 flex flex-col items-center gap-2 opacity-30 text-blue-500">
                 <ChevronDown className="animate-bounce" size={16} />
-            </div>
+            </div> */
+            <AIACSInfo />
         </section>
+
     );
 };
 

@@ -1,7 +1,7 @@
 import tailwindcss from '@tailwindcss/vite'; // 1. Importe o plugin oficial
-import react from '@vitejs/plugin-react-swc'
-import path from 'path'
-import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react-swc';
+import path from 'path';
+import { defineConfig } from 'vite';
 
 export default defineConfig({
   plugins: [
@@ -16,30 +16,16 @@ export default defineConfig({
   // 3. Opcional: Garante que o CSS seja processado corretamente no build
   build: {
     cssMinify: 'lightningcss',
-  }
+  },
+  server: {
+    proxy: {
+      "/api": "http://localhost:4000",  // redireciona para o Express
+    },
+  },
 })
 
 
 
-// import tailwindcss from '@tailwindcss/vite'
-// import react from '@vitejs/plugin-react-swc'
-// import { defineConfig } from 'vite'
-
-// // https://vite.dev/config/
-// export default defineConfig({
-//   plugins: [
-//     react({
-//       // Caso você estivesse usando esbuild: {} aqui, 
-//       // o Vite 8 agora recomenda o uso do motor OXC
-//       // Se não tiver configurações customizadas, pode deixar vazio: react()
-//     }),
-//     tailwindcss(),
-//   ],
-//   build: {
-//     // Garante que o build final seja otimizado
-//     minify: 'oxc', // Opcional: força o uso do novo minificador se disponível
-//   }
-// })
 
 
 
