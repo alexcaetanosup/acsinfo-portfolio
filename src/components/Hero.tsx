@@ -166,7 +166,7 @@ const Hero: React.FC = () => {
 
             <div className="absolute bottom-6 md:bottom-10 flex flex-col items-center gap-2 opacity-30 text-blue-500">
                 <ChevronDown className="animate-bounce" size={16} />
-            </div> */
+            </div>
             <AIACSInfo />
         </section>
 
