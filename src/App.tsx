@@ -6,7 +6,6 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Portfolio from './components/Portfolio';
 import Services from './components/Services';
-import { VisitorCounter } from './components/VisitorCounter';
 import WhatsAppButton from './components/WhatsAppButton';
 
 function App() {
@@ -50,7 +49,6 @@ function App() {
       </main>
       <Footer />
       <WhatsAppButton />
-      <VisitorCounter />
     </div>
   );
 }
